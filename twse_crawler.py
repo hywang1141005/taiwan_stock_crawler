@@ -141,7 +141,6 @@ def check_schema(df: pd.DataFrame) -> pd.DataFrame:
 def main(start_date: str, end_date: str):
     
     date_list = gen_date_list(start_date, end_date)
-    print(date_list)
     for date in date_list:
         logger.info(date)
         df = crawler_twse(date)
